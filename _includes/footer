@@ -23,5 +23,9 @@
     <script src="{{site.hosturl}}/assets/themes/bootstrap/js/bootstrap.min.js"></script>
     <script src="{{site.hosturl}}/assets/themes/custome/js/custome.js"></script>
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1867040"></script>
+    <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e80508ac78f11b964400300cb14ae01' type='text/javascript'%3E%3C/script%3E"));
+</script>
   </body>
 </html>
