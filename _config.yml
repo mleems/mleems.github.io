@@ -3,7 +3,7 @@ paginate: 10
 paginate_path: "/page:num"
 permalink: "/articles/:title/"
 hosturl: "http://jervan.me"
-name: jervan's Blog
+name: Jervan's Blog
 description: A Jekyll blog template designed by Jervan
 paginator_barnum: 9
 author: Jervan
