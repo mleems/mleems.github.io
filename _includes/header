@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="pragma" content="no-cache">    
+    <meta http-equiv="cache-control" content="no-cache">    
+    <meta http-equiv="expires" content="0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="{{site.description}}">
+    <meta name="author" content="{{site.author}}">
+
+    {% if page.layout == 'index' %}
+      <title>{{ site.name }} - {{site.description}}</title>
+    {% else %}
+      <title>{{ page.title }} | {{ site.name }} - {{site.description}}</title>
+    {% endif %}
+
+    <link href="{{site.hosturl}}/assets/themes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{site.hosturl}}/assets/themes/custome/css/custome.css" rel="stylesheet">
+    <!--[if lte IE 9]>
+    <meta http-equiv="refresh" content="0; url={{site.hosturl}}/let's-kill-ie/" />
+    <![endif]-->
+  </head>
+
+  <body>
+	<a name="top"></a>
+	<input type="hidden" id="host_url" value="{{site.hosturl}}">
+	{% if {{page.layout}} == 'index' %}
+		<p id="slim">
+		<a href="#top" title="前往顶部"><span class="glyphicon glyphicon-chevron-up"> </span></a><br><br>
+		<a href="javascript:;" title=" 刷新页面" id="refresh"><span class="glyphicon glyphicon-retweet"> </span></a><br><br>
+		<a href="#foot" title="前往底部"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+		</p>
+	{% elsif {{page.layout}} == 'page' %}
+		<p id="slim">
+		<a href="#top" title="前往顶部"><span class="glyphicon glyphicon-chevron-up"> </span></a><br><br>
+		<a href="#comments" title="前往评论"><span class="glyphicon glyphicon-comment"> </span></a><br><br>
+		<a href="javascript:;" title=" 刷新页面" id="refresh"><span class="glyphicon glyphicon-retweet"> </span></a><br><br>
+		<a href="#foot" title="前往底部"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+		</p>
+	{% elsif {{page.layout}} == 'post' %}
+		<p id="slim" change="display">
+		<a href="#top" title="前往顶部"><span class="glyphicon glyphicon-chevron-up"> </span></a><br><br>
+		<a href="#comments" title="前往评论"><span class="glyphicon glyphicon-comment"> </span></a><br><br>
+		<a href="javascript:;" title=" 刷新页面" id="refresh"><span class="glyphicon glyphicon-retweet"> </span></a><br><br>
+		<a href="javascript:;" title="隐藏边栏" id="control"><span class="glyphicon glyphicon-arrow-left"> </span></a><br><br>
+		<a href="#foot" title="前往底部"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+		</p>
+	{% endif %}
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	      <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		    <span class="sr-only">{{site.hosturl}}</span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="{{site.hosturl}}">首页</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+		  <ul class="nav navbar-nav">
+
+		    {% for item in site.navbar %}
+		    {% if item.url == page.url %}
+		    <li class="active">
+		    {% else %}
+		    <li>
+		    {% endif %}
+		    <a href="{{item.url}}" title="{{item.title}}">{{item.name}}</a>
+		    </li>
+		    {% endfor %}
+
+		  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="{{site.hosturl}}/404.html" target="_blank" title="访问本站404页面"><img src="{{site.hosturl}}/assets/images/404.ico" /><strong>404公益</strong></a></li>
+				<li><a href="{{site.hosturl}}/feed/" target="_blank" title="订阅本站"><img src="{{site.hosturl}}/assets/images/rss.ico" /><strong>订阅</strong></a></li>
+		  </ul>
+			  <form class="navbar-form" role="search" action="javascript:myGoogleSearch();">
+		    <div class="form-group">
+		      <input type="text" class="form-control" placeholder="Google Search" id="myGoogle">
+		    </div>
+		    <button type="submit" class="btn btn-default">搜索</button>
+		    </form>
+		</div><!-- /.navbar-collapse -->
+			
+	      </div><!-- /.container -->
+	    </nav>
+
+
+	      
+
+	    <div class="container">
+
+	      <div class="row">
+		      <div class="col-lg-9" id="left_zhalan">

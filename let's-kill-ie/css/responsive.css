@@ -1,0 +1,249 @@
+@media only screen and (min-width: 1201px) {
+    .topbar { height: 60px!important; }
+    .header .navLink { display: block!important; }
+}
+@media only screen and (max-width: 1200px) and (min-width: 961px) {
+    .topbar { height: 60px!important; }
+    .header .navLink { display: block!important; }
+
+    .topbar nav li a {
+        width: 116px;
+        font-size: 20px;
+    }
+    article h1 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 769px) {
+    .topbar { height: 60px!important; }
+    .header .navLink { display: block!important; }
+
+    .header h2 {
+        font-size: 24px;
+    }
+    .topbar .checker {
+        font-size: 16px;
+        width: 170px;
+    }
+    .topbar nav li a {
+        width: 96px;
+        font-size: 16px;
+    }
+
+    .header .social {
+        display: block;
+        width: 300px;
+        height: 88px;
+        margin: 0 0 8px 0;
+    }
+    .cb-green, .cb-yellow, .cb-red {
+        background-position: 4px center;
+        margin-left: 4px;
+    }
+    .checkbrowser h2 {
+        margin-left: 86px;
+        padding-top: 52px;
+    }
+    .identity {
+        font-size: 38px;
+    }
+    article h1 {
+        font-size: 24px;
+    }
+    article p, article li {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 691px) {
+    .topbar { height: 60px!important; }
+    .header .navLink { display: block!important; }
+
+    .header h2 {
+        font-size: 24px;
+    }
+    .topbar .checker {
+        font-size: 15px;
+        width: 150px;
+    }
+    .topbar nav li a {
+        width: 80px;
+        font-size: 16px;
+    }
+    .header .social {
+        display: block;
+        width: 300px;
+        height: 88px;
+        margin: 0 0 8px 0;
+    }
+    .cb-green, .cb-yellow, .cb-red {
+        background-position: 4px center;
+        margin-left: 4px;
+    }
+    .checkbrowser h2 {
+        font-size: 22px;
+        margin-left: 86px;
+        padding-top: 56px;
+    }
+    .identity {
+        font-size: 32px;
+    }
+    article h1 {
+        font-size: 24px;
+    }
+    article p, article li {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 690px) and (min-width: 581px) {
+    .topbar { height: 60px!important; }
+    .header .navLink { display: block!important; }
+
+    .header h2 {
+        font-size: 28px;
+    }
+    .header .headerNext {
+        float: none;
+        display: block;
+        width: 96%;
+    }
+    .header .social {
+        margin: 0 8px 16px -8px;
+        height: 88px;
+    }
+    .topbar .checker {
+        font-size: 15px;
+        width: 146px;
+    }
+    .topbar nav li a {
+        width: 64px;
+        font-size: 14px;
+    }
+    .checkbrowser {
+        float: none;
+        display: block;
+    }
+    article h1 {
+        font-size: 32px;
+        padding-left: 4px;
+    }
+    article p, article li {
+        font-size: 20px;
+        padding: 8px 4px;
+    }
+    .browserBanner h2 {
+        font-size: 48px;
+    }
+    .browserBanner p {
+        font-size: 20px;
+    }
+    .identity {
+        display: block;
+        font-size: 36px;
+        height: 96px;
+        width: 90%;
+        margin: 4px;
+        padding-top: 20px;
+    }
+    .helpUs .note {
+        text-align: center;
+    }
+}
+
+/* ====================== */
+
+@media only screen and (max-width: 580px) and (min-width: 421px) {
+    .header h1 {
+        line-height: 1;
+        font-size: 34px;
+    }
+    .header h2 {
+        font-size: 30px;
+    }
+    article h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .browserBanner h2 {
+        font-size: 38px;
+        line-height: 0.8;
+        padding-top: 56px;
+    }
+    .identity {
+        display: block;
+        font-size: 30px;
+        height: 96px;
+        width: 90%;
+        margin: 4px;
+        padding-top: 16px;
+    }
+    .helpUs .note {
+        font-size: 16px;
+        text-align: center;
+        padding: 4px;
+    }
+    .header .burgerBtn {
+        display: block;
+    }
+    .header .navLink {
+        display: none;
+        width: 580px;
+    }
+    .header .navLink a {
+        width: 580px;
+    }
+    .topbar .checker {
+        display: none!important;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .header h1 {
+        line-height: 1;
+        font-size: 32px;
+    }
+    .header h2 {
+        font-size: 28px;
+    }
+    article h1 {
+        font-size: 26px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .checkbrowser h2 {
+        line-height: 1;
+    }
+    .browserBanner h2 {
+        font-size: 36px;
+        line-height: 0.8;
+        padding-top: 36px;
+    }
+    .identity {
+        display: block;
+        font-size: 26px;
+        height: 96px;
+        width: 90%;
+        margin: 4px;
+        padding-top: 16px;
+    }
+    .helpUs .note {
+        font-size: 16px;
+        text-align: center;
+        padding: 4px;
+    }
+    .header .burgerBtn {
+        display: block;
+    }
+    .header .navLink {
+        display: none;
+        width: 420px;
+    }
+    .header .navLink a {
+        width: 420px;
+    }
+    .topbar .checker {
+        display: none!important;
+    }
+}

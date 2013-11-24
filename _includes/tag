@@ -1,0 +1,17 @@
+      <div class="row">
+        <div class="col-lg-12">
+{% for tag in site.tags %}
+    <a href="#{{ tag | first }}">{{ tag | first }} <span class="badge">{{ tag | last |size }}</span></a>&nbsp;&nbsp;&nbsp;
+{% endfor %}
+
+	    {% for tag in site.tags %}
+	    <h2><a name="{{ tag | first }}" href="#{{ tag | first }}" id="my_glyphicon"> <span class="glyphicon glyphicon-paperclip"> </span></a>{{ tag | first }}</h2>
+	    <blockquote>
+		{% for post in tag.last %}		
+		  <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+		{% endfor %}
+	    </blockquote></br>
+	    {% endfor %}
+	</div>
+      </div>
+	  

@@ -1,0 +1,77 @@
+{% assign i = 0 %}
+{% assign current_year = -1 %}
+{% assign current_month = -1 %}
+{% assign print_flag = 'false' %}
+
+{% for post in site.posts %}
+
+{% assign post_year = {{post.date|date:'%y'}} %}
+{% assign post_month = {{post.date|date:'%m'}} %}
+
+{% if current_year != post_year %}
+{% if print_flag == 'true' %}
+<a href="#{{current_year}}{{current_month}}">{{current_year}}年{{current_month}}月 <span class="badge">{{i}}</span></a>&nbsp;&nbsp;&nbsp;
+{% endif %}
+{% assign current_year = post_year %}
+{% assign current_month = post_month %}
+{% assign i = 1 %}
+{% assign print_flag = 'true' %}
+{% elsif current_month != post_month %}
+<a href="#{{current_year}}{{current_month}}">{{current_year}}年{{current_month}}月 <span class="badge">{{i}}</span></a>&nbsp;&nbsp;&nbsp;
+{% assign current_month = post_month %}
+{% assign i = 1 %}
+{% else %}
+{% assign i = {{i}}|plus: 1 %}
+{% endif %}
+
+{% if post.previous.url %}
+{% else %}
+<a href="#{{current_year}}{{current_month}}">{{current_year}}年{{current_month}}月 <span class="badge">{{i}}</span></a>&nbsp;&nbsp;&nbsp;
+{% endif %}
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% assign i = 0 %}
+{% assign current_year = -1 %}
+{% assign current_month = -1 %}
+{% assign current_url = '' %}
+{% assign current_title = '' %}
+{% assign print_flag = 'false' %}
+
+{% for post in site.posts %}
+
+{% assign post_year = {{post.date|date:'%y'}} %}
+{% assign post_month = {{post.date|date:'%m'}} %}
+
+{% if current_year != post_year %}
+{% if current_year != -1 %}
+</blockquote>
+{% endif %}
+{% assign current_year = post_year %}
+{% assign current_month = post_month %}
+<h2><a name="{{current_year}}{{current_month}}" href="#{{current_year}}{{current_month}}" id="my_glyphicon"> <span class="glyphicon glyphicon-paperclip"> </span></a>{{current_year}}年{{current_month}}月 </h2>
+<blockquote>
+<p><a href="{{post.url}}">{{post.title}} </a></p>
+{% elsif current_month != post_month %}
+{% assign current_month = post_month %}
+<h2><a name="{{current_year}}{{current_month}}" href="#{{current_year}}{{current_month}}" id="my_glyphicon"> <span class="glyphicon glyphicon-paperclip"> </span></a>{{current_year}}年{{current_month}}月 </h2>
+</blockquote>
+<blockquote>
+<p><a href="{{post.url}}">{{post.title}} </a></p>
+{% else %}
+<p><a href="{{post.url}}">{{post.title}} </a></p>
+{% endif %}
+{% endfor %}
+</blockquote>
+
+

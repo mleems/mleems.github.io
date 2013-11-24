@@ -1,0 +1,11 @@
+<!-- newest comment -->
+<div class="well">
+	<div class="row">
+		<div class="col-lg-12">
+			<h4><strong>最新评论</strong></h4>
+<!-- UYAN NEW COMMENT BEGIN -->
+<div id="uyan_newcmt_unit"></div>
+<!-- UYAN NEW COMMENT END -->
+		</div>
+	</div>
+</div><!-- /newest comment -->

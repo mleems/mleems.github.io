@@ -1,0 +1,62 @@
+<!-- category and archive -->
+          <div class="well">
+              <div class="row">
+                <div class="col-lg-6">
+		<h4><strong>分类目录</strong></h4>
+                  <ul class="list-unstyled">
+            
+                {% assign un_category_num = 0 %}
+                {% for post in site.posts %}
+                  {% assign category_num = {{post.categories|size}} %}
+                  {% if category_num == 0 %}
+                    {% assign un_category_num = {{un_category_num}}|plus: 1 %}
+                  {% endif %}
+                {% endfor %}
+		  <li><a href="{{site.hosturl}}/categories/#未分类">未分类 </a><span>({{un_category_num}})</span></li>
+
+                
+
+
+                {% for category in site.categories %}
+		  <li><a href="{{site.hosturl}}/categories/#{{ category | first }}">{{ category | first }} </a><span>({{ category | last |size}})</span></li>
+                {% endfor %} 
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+		  <h4><strong>文章归档</strong></h4>
+                  <ul class="list-unstyled">
+		    {% assign i = 0 %}
+		    {% assign current_year = -1 %}
+		    {% assign current_month = -1 %}
+		    {% assign print_flag = 'false' %}
+
+		    {% for post in site.posts %}
+
+		     {% assign post_year = {{post.date|date:'%y'}} %}
+		     {% assign post_month = {{post.date|date:'%m'}} %}
+
+		     {% if current_year != post_year %}
+			{% if print_flag == 'true' %}
+			<li><a href="{{site.hosturl}}/archive/#{{current_year}}{{current_month}}">{{current_year}}年{{current_month}}月 </a>({{i}})</li>
+			{% endif %}
+			{% assign current_year = post_year %}
+			{% assign current_month = post_month %}
+			{% assign i = 1 %}
+			{% assign print_flag = 'true' %}
+		      {% elsif current_month != post_month %}
+			<li><a href="{{site.hosturl}}/archive/#{{current_year}}{{current_month}}">{{current_year}}年{{current_month}}月 </a>({{i}})</li>
+			{% assign current_month = post_month %}
+			{% assign i = 1 %}
+		      {% else %}
+			{% assign i = {{i}}|plus: 1 %}
+		      {% endif %}
+
+		      {% if post.previous.url %}
+		      {% else %}
+			<li><a href="{{site.hosturl}}/archive/#{{current_year}}{{current_month}}">{{current_year}}年{{current_month}}月 </a>({{i}})</li>
+		      {% endif %}
+		    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+          </div><!-- /end category and archive -->

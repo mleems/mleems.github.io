@@ -1,0 +1,235 @@
+
+      <div class="row">
+        <div class="col-lg-8">
+
+			<!-- pagination -->
+
+			<!-- 工作变量初始化 -->
+      {% assign barnum = {{site.paginator_barnum}} %}
+      {% if {{barnum}} == null or {{barnum}} < 5 or {{barnum}} > 10 %}
+        <!--barnum赋值错误,需要修正-->
+        {% assign barnum = 9 %}
+        {% assign half_barnum = {{barnum}}|divided_by:2 %}
+        {% assign pa_m_hb = {{paginator.page}} | minus: {{half_barnum}} %}
+        {% assign pa_p_hb = {{paginator.page}} | plus: {{half_barnum}} %}
+        {% assign tp_m_b_p_1 = {{paginator.total_pages}} | minus: {{barnum}} | plus: 1 %}
+        {% assign tp_m_hb = {{paginator.total_pages}} | minus: {{half_barnum}} %}
+        {% assign b_m_hb = {{barnum}} | minus: {{half_barnum}} %}
+        {% assign pa_m_hb = {{paginator.page}} | minus: {{half_barnum}} %}
+        {% assign pa_p_hb = {{paginator.page}} | plus: {{half_barnum}} %}
+      {% else %}
+        <!--barnum已正确赋初值-->
+        {% assign half_barnum = {{barnum}}|divided_by:2 %}
+        {% assign pa_m_hb = {{paginator.page}} | minus: {{half_barnum}} %}
+        {% assign pa_p_hb = {{paginator.page}} | plus: {{half_barnum}} %}
+        {% assign tp_m_b_p_1 = {{paginator.total_pages}} | minus: {{barnum}} | plus: 1 %}
+        {% assign tp_m_hb = {{paginator.total_pages}} | minus: {{half_barnum}} %}
+        {% assign b_m_hb = {{barnum}} | minus: {{half_barnum}} %}
+        {% assign pa_m_hb = {{paginator.page}} | minus: {{half_barnum}} %}
+        {% assign pa_p_hb = {{paginator.page}} | plus: {{half_barnum}} %}
+      {% endif %}
+      <!-- 初始化结束 -->
+
+
+
+			<ul class="pagination">
+
+				{% if {{paginator.total_pages}} == 1 or {{paginator.total_posts}} == null %}
+			    <!-- 只有一页或站内无文章 -->
+				  <li class="first disabled"><a>&laquo;</a></li>
+				  <li class="previous disabled"><a>&lsaquo;</a></li>
+				  <li class="active"><a href="/" title="首页">1 <span class="sr-only">(current)</span></a></li>
+				  <li class="next disabled"><a>&rsaquo;</a></li>
+				  <li class="last disabled"><a>&raquo;</a></li>
+				  <!-- /只有一页或站内无文章 -->
+				
+				
+				{% elsif {{paginator.total_pages}} <= {{barnum}} %}
+        <!-- 总页数不大于分页条上限 -->
+					
+					{% if {{paginator.page}} == 1 %}
+          <!-- 总页数不大于分页条上限 当前第一页 -->
+						
+						<li class="first disabled"><a>&laquo;</a></li>
+						<li class="previous disabled"><a>&lsaquo;</a></li>
+						<li class="active"><a href="/" title="首页">1 <span class="sr-only">(current)</span></a></li>
+						
+						{% for i in (2..{{paginator.total_pages}}) %}
+							<li><a href="/page{{i}}">{{i}}</a></li>
+						{% endfor %}
+						
+						<li class="next"><a href="/page{{paginator.next_page}}/" title="下一页">&rsaquo;</a></li>
+						
+						<li class="last"><a href="/page{{paginator.total_pages}}/" title="末页">&raquo;</a></li>
+            <!-- /总页数不大于分页条上限 当前第一页 -->
+
+					
+					{% elsif {{paginator.page}} == {{paginator.total_pages}} %}
+          <!-- 总页数不大于分页条上限 当前最后一页 -->
+						
+						<li class="first"><a href="/" title="首页">&laquo;</a></li>
+						<li class="previous"><a href="/page{{paginator.previous_page}}/" title="上一页">&lsaquo;</a></li>
+						<li><a href="/" title="首页">1</a></li>
+						
+						{% for i in (2..{{paginator.total_pages}}) %}
+              {% if i == {{paginator.page}} %}
+                <li class="active">
+              {% else %}
+                <li>
+              {% endif %}
+              <a href="/page{{i}}">{{i}}</a></li>
+						{% endfor %}
+						
+						<li class="next disabled"><a>&rsaquo;</a></li>
+						<li class="last disabled"><a>&raquo;</a></li>
+            <!-- /总页数不大于分页条上限 当前最后一页 -->
+					
+					{% else %}
+          <!-- 总页数不大于分页条上限 当前中间页 -->
+						
+						<li class="first"><a href="/" title="首页">&laquo;</a></li>
+						<li class="previous"><a href="/page{{paginator.previous_page}}/" title="上一页">&lsaquo;</a></li>
+						<li><a href="/" title="首页">1</a></li>
+
+						{% for i in (2..{{paginator.total_pages}}) %}
+              {% if i == {{paginator.page}} %}
+                <li class="active">
+              {% else %}
+                <li>
+              {% endif %}
+              <a href="/page{{i}}">{{i}}</a></li>
+						{% endfor %}
+
+						<li class="next"><a href="/page{{paginator.next_page}}/" title="下一页">&rsaquo;</a></li>
+						<li class="last"><a href="/page{{paginator.total_pages}}/" title="末页">&raquo;</a></li>
+            <!-- /总页数不大于分页条上限 当前中间页 -->
+					
+					{% endif %}
+				
+				{% else %}
+				  <!-- 总页数大于分页条上限 -->
+					
+					{% if {{paginator.page}} == 1 %}
+            <!-- 总页数大于分页条上限 当前第一页 -->
+						
+						<li class="first disabled"><a>&laquo;</a></li>
+						<li class="previous disabled"><a>&lsaquo;</a></li>
+						<li class="active"><a href="/" title="首页">1 <span class="sr-only">(current)</span></a></li>
+
+						{% for i in (2..{{barnum}}) %}
+							<li><a href="/page{{i}}">{{i}}</a></li>
+						{% endfor %}
+						
+						<li class="next"><a href="/page{{paginator.next_page}}/" title="下一页">&rsaquo;</a></li>
+						<li class="last"><a href="/page{{paginator.total_pages}}/" title="末页">&raquo;</a></li>
+            <!-- /总页数大于分页条上限 当前第一页 -->
+					
+					{% elsif {{paginator.page}} == {{paginator.total_pages}} %}
+            <!-- 总页数大于分页条上限 当前最后页 -->
+						
+						<li class="first"><a href="/" title="首页">&laquo;</a></li>
+						<li class="previous"><a href="/page{{paginator.previous_page}}/" title="上一页">&lsaquo;</a></li>
+						
+						{% for i in ({{tp_m_b_p_1}}..{{paginator.total_pages}}) %}
+              {% if i == {{paginator.total_pages}} %}
+                <li class="active">
+              {% else %}
+                <li>
+              {% endif %}
+              <a href="/page{{i}}">{{i}}</a></li>
+						{% endfor %}
+						
+						<li class="next disabled"><a>&rsaquo;</a></li>
+						<li class="last disabled"><a>&raquo;</a></li>
+            <!-- 总页数大于分页条上限 当前最后页 -->
+
+					{% else %}
+          <!-- 总页数大于分页条上限 当前中间页 -->
+
+            {% if {{paginator.page}} <= {{b_m_hb}} %}
+              <!-- 总页数大于分页条上限 当前页在分页条半数之前 -->
+
+              <li class="first"><a href="/" title="首页">&laquo;</a></li>
+						  <li class="previous"><a href="/page{{paginator.previous_page}}/" title="上一页">&lsaquo;</a></li>
+              <li><a href="/" title="首页">1</a></li>
+
+              {% for i in (2..{{barnum}}) %}
+                {% if i == {{paginator.page}} %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                <a href="/page{{i}}">{{i}}</a>
+                </li>
+              {% endfor %}
+
+              <li class="next"><a href="/page{{paginator.next_page}}/" title="下一页">&rsaquo;</a></li>
+						  <li class="last"><a href="/page{{paginator.total_pages}}/" title="末页">&raquo;</a></li>
+
+            {% elsif {{paginator.page}} > {{tp_m_hb}} %}
+              <!-- 总页数大于分页条上限 当前页大于『总页数 - 分页条一半 + 1』 -->
+
+              <li class="first"><a href="/" title="首页">&laquo;</a></li>
+              <li class="previous"><a href="/page{{paginator.previous_page}}/" title="上一页">&lsaquo;</a></li>
+
+              {% for i in ({{tp_m_b_p_1}}..{{paginator.total_pages}}) %}
+                {% if i == {{paginator.page}} %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                <a href="/page{{i}}/">{{i}}</a></li>
+              {% endfor %}
+
+              <li class="next"><a href="/page{{paginator.next_page}}/" title="下一页">&rsaquo;</a></li>
+					    <li class="last"><a href="/page{{paginator.total_pages}}/" title="末页">&raquo;</a></li>
+              <!-- 总页数大于分页条上限 当前页大于『总页数 - 分页条一半 + 1』 -->
+
+
+            {% else %}
+              <!-- 真•中间页 -->
+						
+						  <li class="first"><a href="/" title="首页">&laquo;</a></li>
+						  <li class="previous"><a href="/page{{paginator.previous_page}}/" title="上一页">&lsaquo;</a></li>
+
+						  {% for i in ({{pa_m_hb}}..{{pa_p_hb}}) %}
+                {% if i <= {{paginator.total_pages}} and i > 1 %}
+							    {% if i == paginator.page %}
+                    <li class="active">
+                  {% else %}
+                    <li>
+                  {% endif %}
+                  <a href="/page{{i}}">{{i}}</a></li>
+                {% endif %}
+						  {% endfor %}
+
+						  <li class="next"><a href="/page{{paginator.next_page}}/" title="下一页">&rsaquo;</a></li>
+						  <li class="last"><a href="/page{{paginator.total_pages}}/" title="末页">&raquo;</a></li>
+					
+					  {% endif %}
+				
+				  {% endif %}
+
+      {% endif %}
+			
+			</ul>
+			<!-- end pagination -->
+      </div>
+      <div class="col-lg-4">
+      <!-- 跳页 -->
+      {% if {{paginator.total_pages}} >= {{barnum}} %}
+			<ul class="pagination">
+        <form class="form-inline" role="form" action="javascript:page_jumping();">
+          <div class="form-group">
+            <label class="sr-only" for="page_jumping_num">pagenum</label>
+            <input type="text" class="form-control" placeholder="共{{paginator.total_pages}}页 / {{site.posts|size}}篇文章" id="page_jumping_num">
+          </div>
+          <button type="submit" class="btn btn-primary" id="page_jumping_btn">跳转</button>
+        </form>
+      </ul>
+      {% endif %}
+
+      <!-- 跳页 -->
+      
+      </div>
+    </div>

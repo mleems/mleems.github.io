@@ -1,0 +1,38 @@
+      <div class="row">
+        <div class="col-lg-12">
+
+                {% assign un_category_num = 0 %}
+                {% for post in site.posts %}
+                  {% assign category_num = {{post.categories|size}} %}
+                  {% if category_num == 0 %}
+                    {% assign un_category_num = {{un_category_num}}|plus: 1 %}
+                  {% endif %}
+                {% endfor %}
+    <a href="#未分类">未分类 <span class="badge">{{un_category_num}}</span></a>&nbsp;&nbsp;&nbsp;
+
+{% for category in site.categories %}
+    <a href="#{{ category | first }}">{{ category | first }} <span class="badge">{{ category | last |size }}</span></a>&nbsp;&nbsp;&nbsp;
+{% endfor %}
+
+
+	    <h2><a name="未分类" href="#未分类" id="my_glyphicon"> <span class="glyphicon glyphicon-paperclip"> </span></a>未分类</h2>
+      <blockquote>
+          {% for post in site.posts %}
+              {% assign category_num = {{post.categories|size}} %}
+              {% if category_num == 0 %}
+                  <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+              {% endif %}
+          {% endfor %}
+      </blockquote></br>
+
+	    {% for category in site.categories %}
+	    <h2><a name="{{ category | first }}" href="#{{ category | first }}" id="my_glyphicon"> <span class="glyphicon glyphicon-paperclip"> </span></a>{{ category | first }}</h2>
+	    <blockquote>
+		{% for post in category.last %}		
+		  <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+		{% endfor %}
+	    </blockquote></br>
+	    {% endfor %}
+	</div>
+      </div>
+	  

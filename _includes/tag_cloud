@@ -1,0 +1,13 @@
+<!-- tag div -->
+		  <div class="well">
+              <div class="row">
+                <div class="col-lg-12">
+				<h4><strong>标签</strong></h4>
+					<div id="tagcloud">
+						{% for tag in site.tags %}
+						<a href="{{site.hosturl}}/tags/#{{ tag | first }}">{{ tag | first }}</a>
+						{% endfor %}
+					</div>
+                </div>
+              </div>
+          </div><!-- /end tag div -->

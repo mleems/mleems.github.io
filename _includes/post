@@ -1,0 +1,103 @@
+
+<h1><a>{{ page.title }}</a></h1>
+<div class="row">
+	<div class="col-lg-10">
+		<span class="glyphicon glyphicon-list-alt" title="发布时间"></span>&nbsp;发表于 {{ page.date | date: '%Y年%m月%d日' }}&nbsp;
+		<span class="glyphicon glyphicon-user" title="作者"></span>&nbsp;<a href="{{ site.hosturl }}/">{{site.author}}</a>
+	</div>
+	<div class="col-lg-2">
+		<span class="glyphicon glyphicon-comment fixed-right"></span>
+		<span>&nbsp;<a href="#comments" >评论</a>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-lg-12">
+
+	        {% assign category_num = {{page.categories|size}} %}
+          {% if category_num > 0 %}
+					<span class="glyphicon glyphicon-folder-open" title="分类"></span>
+						<span>&nbsp;
+						{% for category in page.categories %}
+						<a href="{{ site.hosturl }}/categories/#{{ category }}" title="查看分类{{ category }}中的全部文章" target="_blank" >{{ category }}</a>&nbsp;
+						{% endfor %}
+						</span>
+          {% else %}
+					  <span class="glyphicon glyphicon-folder-open" title="分类"></span>
+						<span>&nbsp;
+						<a href="{{ site.hosturl }}/categories/#未分类" title="查看未分类的全部文章" target="_blank" >未分类</a>&nbsp;
+						</span>
+          {% endif %}
+
+          {% assign tag_num = {{page.tags|size}} %}
+          {% if tag_num > 0 %}
+	        <span class="glyphicon glyphicon-tags" title="标签"></span>
+	        <span>&nbsp;
+	        {% for tag in page.tags %}
+	        <a href="{{ site.hosturl }}/tags/#{{ tag }}" title="查看含有{{ tag }}标签的其他文章" >{{ tag }}</a>&nbsp;
+	        {% endfor %}
+	        </span>
+          {% endif %}
+	</div>
+</div>
+
+<p>
+{{content}}
+
+{% include post_footer %}
+</p>
+
+<div class="row">
+	<div class="col-lg-12">
+
+
+	        {% assign category_num = {{page.categories|size}} %}
+          {% if category_num > 0 %}
+					<span class="glyphicon glyphicon-folder-open" title="分类"></span>
+						<span>&nbsp;
+						{% for category in page.categories %}
+						<a href="{{ site.hosturl }}/categories/#{{ category }}" title="查看分类{{ category }}中的全部文章" target="_blank" >{{ category }}</a>&nbsp;
+						{% endfor %}
+						</span>
+          {% else %}
+					  <span class="glyphicon glyphicon-folder-open" title="分类"></span>
+						<span>&nbsp;
+						<a href="{{ site.hosturl }}/categories/#未分类" title="查看未分类的全部文章" target="_blank" >未分类</a>&nbsp;
+						</span>
+          {% endif %}
+
+          {% assign tag_num = {{page.tags|size}} %}
+          {% if tag_num > 0 %}
+	        <span class="glyphicon glyphicon-tags" title="标签"></span>
+	        <span>&nbsp;
+	        {% for tag in page.tags %}
+	        <a href="{{ site.hosturl }}/tags/#{{ tag }}" title="查看含有{{ tag }}标签的其他文章" >{{ tag }}</a>&nbsp;
+	        {% endfor %}
+	        </span>
+          {% endif %}
+
+	</div>
+</div>
+<hr>
+
+<ul class="pager">
+	{% if page.previous %}
+		<li class="previous">
+		<a href="{{ site.hosturl }}{{ page.previous.url }}">上一篇： {{ page.previous.title }}</a>
+		</li>
+  {% else %}
+    <li class="previous disabled">
+		<a>上一篇： 没有了...</a>
+		</li>
+	{% endif %}
+	{% if page.next %}
+		<li class="next">
+		<a href="{{ site.hosturl }}{{ page.next.url }}" class="pull-right">下一篇： {{ page.next.title }}</a>
+		</li>
+  {% else %}
+		<li class="next disabled">
+		<a class="pull-right">下一篇： 没有了...</a>
+		</li>
+	{% endif %}
+</ul>
+

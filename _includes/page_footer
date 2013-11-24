@@ -1,0 +1,8 @@
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		  <h3 class="panel-title"><strong><center> 本页最后更新于{{site.time|date: '%Y年%m月%d日'}} </center></strong></h3>
+		</div>
+		<div class="panel-body">
+		  <p>访问本站<a href="{{site.hosturl}}/404.html">404页面</a>帮助寻找遗失儿童。</p>
+		</div>
+	</div>
