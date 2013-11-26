@@ -1,7 +1,7 @@
 ---
 layout: post
-title: z/OS ĞéÄâ»·¾³ÔÚPCÉÏµÄ´î½¨£¨linux & windows£©
-categories: ´óĞÍ»ú ÏµÍ³¹ÜÀí
+title: z/OS è™šæ‹Ÿç¯å¢ƒåœ¨PCä¸Šçš„æ­å»ºï¼ˆlinux & windowsï¼‰
+categories: å¤§å‹æœº ç³»ç»Ÿç®¡ç†
 tags: Mainframe
 ---
 

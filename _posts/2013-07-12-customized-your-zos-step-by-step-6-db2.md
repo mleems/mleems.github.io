@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ¡¾ÏµÁĞ¡¿¶¨ÖÆÄã×Ô¼ºµÄz/OS¡ª¡ªDB2Æª
-categories: ´óĞÍ»ú ÏµÍ³¹ÜÀí
+title: ã€ç³»åˆ—ã€‘å®šåˆ¶ä½ è‡ªå·±çš„z/OSâ€”â€”DB2ç¯‡
+categories: å¤§å‹æœº ç³»ç»Ÿç®¡ç†
 tags: Mainframe
 ---
 
