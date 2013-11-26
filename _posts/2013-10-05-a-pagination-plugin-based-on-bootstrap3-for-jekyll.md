@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jervan's Jekyll 博客模板使用教程（进阶篇）
+title: 基于BootStrap3的Jekyll博客分页插件
 categories: Jekyll JJ
 tags: [静态博客,Jekyll]
 ---
