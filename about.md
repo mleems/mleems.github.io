@@ -5,6 +5,7 @@ permalink: "/about/"
 ---
 
 #关于本站
+___
 
 这个博客是基于 Jekyll 和 Github Pages 服务的静态站点。
 
@@ -13,6 +14,7 @@ permalink: "/about/"
 博客所有者: Jervan | 博客主题作者: Jervan
 
 #关于Jervan
+___
 
 TAGS：
 
@@ -24,5 +26,6 @@ TAGS：
     
 
 #联系方式
+___
 
 ___E-mail___: _moonsnidget {At} gmail {Dot} com_
