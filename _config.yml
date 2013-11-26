@@ -3,7 +3,6 @@ paginate: 10
 paginate_path: "/page:num"
 permalink: "/articles/:title/"
 pygments:true
-markdown: rdiscount
 hosturl: "http://jervan.me"
 name: Jervan's Blog
 description: A Jekyll blog template designed by Jervan
