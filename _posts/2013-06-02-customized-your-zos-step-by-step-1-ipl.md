@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【系列】定制你自己的z/OS——IPL篇
+title: 【系列】定制你自己的z/OS-其一 ~ IPL篇 ~
 categories: 大型机 系统管理
 tags: Mainframe
 ---
