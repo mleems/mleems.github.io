@@ -1,8 +1,8 @@
 ---
 layout: post
-title: z/OS 虚拟环境在PC上的搭建（linux & windows）
+title: z/OS 虚拟环境在Linux上的搭建
 categories: 大型机 系统管理
-tags: Mainframe
+tags: [Mainframe,Linux,OS]
 ---
 
 # taken
