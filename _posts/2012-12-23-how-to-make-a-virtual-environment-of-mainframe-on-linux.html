@@ -158,7 +158,7 @@ make </span><span class="pun">&amp;&amp;</span><span class="pln"> make install</
 
 <p>得益于国外某大神Willem Konynenberg的研究成果，使得Hercules下运行系统的TCP/IP栈与宿主机的TCP/IP栈之间的通信成为了可能。</p>
 
-<p>虚拟CTC连接创建一个隧道(tunnel)<code>/dev/net/tun</code>或<code>/dev/tun0</code>，对Hercules来说它是一个字符型设备，对宿主机来说它是一个虚拟网络接口。Hercules的3088网络驱动会让运行在Hercules下的系统（如z/OS）把tun设备识别为CTCA（Channel to Channel Adapter）。这样一样，每个链接终端就都有了一个不同于宿主机真实IP的只属于它自己的IP地址</p>
+<p>虚拟CTC连接创建一个隧道(tunnel)<code>/dev/net/tun</code>或<code>/dev/tun0</code>，对Hercules来说它是一个字符型设备，对宿主机来说它是一个虚拟网络接口。Hercules的3088网络驱动会让运行在Hercules下的系统（如z/OS）把tun设备识别为CTCA（Channel to Channel Adapter）。这样一来，每个链接终端就都有了一个不同于宿主机真实IP的只属于它自己的IP地址</p>
 
 <p>授权：</p>
 
