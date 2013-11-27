@@ -256,7 +256,15 @@ function page_jumping(){
 
 $(document).ready(function(){
 
-  $(function(){
+  
+
+$("p img").each(function() {
+    var strA = "<a class='fancybox' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+  $('.fancybox').fancybox();
+
+$(function(){
       $("p#slim a#control").click(function(){
         if($("p#slim").attr("change") == 'hide'){
           $("p#slim a#control").attr("title","隐藏边栏");
