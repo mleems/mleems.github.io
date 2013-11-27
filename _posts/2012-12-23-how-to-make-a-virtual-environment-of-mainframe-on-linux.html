@@ -168,7 +168,7 @@ chgrp jervan </span><span class="pun">/</span><span class="pln">usr</span><span 
 chmod </span><span class="lit">4750</span><span class="pln"> </span><span class="pun">/</span><span class="pln">usr</span><span class="pun">/</span><span class="kwd">local</span><span class="pun">/</span><span class="pln">bin</span><span class="pun">/</span><span class="pln">hercifc </span></code></pre>
 
 <p>开启ip转发：
-编译<code>/etc/sysctl.conf</code>文件把<code>net.ipv4.ip_forward</code>的值设置为1</p>
+编辑<code>/etc/sysctl.conf</code>文件把<code>net.ipv4.ip_forward</code>的值设置为1</p>
 
 <pre class="prettyprint prettyprinted" style=""><code><span class="pln">echo </span><span class="str">"1"</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="str">/proc/</span><span class="pln">sys</span><span class="pun">/</span><span class="pln">net</span><span class="pun">/</span><span class="pln">ipv4</span><span class="pun">/</span><span class="pln">ip_forward</span></code></pre>
 
