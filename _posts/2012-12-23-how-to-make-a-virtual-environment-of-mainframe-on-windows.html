@@ -4,13 +4,13 @@ title: z/OS 虚拟环境在Windows上的搭建
 categories: 大型机 系统管理
 tags: [Mainframe,Windows,OS]
 ---
-<p><div class="toc" style="list-style-type:none"><div class="toc">
+<p><div class="toc"><div class="toc">
 <ul>
 <li><a href="#写在前面">〇、写在前面</a></li>
 <li><a href="#一准备工作">一、准备工作</a><ul>
 <li><a href="#硬件准备">1. 硬件准备</a></li>
-<li><a href="#软件准备">2.软件准备</a></li>
-<li><a href="#卷文件准备">3.卷文件准备</a></li>
+<li><a href="#软件准备-系统需求">2. 软件准备 &amp; 系统需求</a></li>
+<li><a href="#卷文件准备">3. 卷文件准备</a></li>
 </ul>
 </li>
 <li><a href="#二软件安装">二、软件安装</a><ul>
@@ -60,7 +60,7 @@ tags: [Mainframe,Windows,OS]
 <li>一个支持虚拟化的CPU</li>
 </ul>
 
-<h2 class="wmd-title" id="软件准备">2.软件准备</h2>
+<h2 class="wmd-title" id="软件准备-系统需求">2. 软件准备 &amp; 系统需求</h2>
 
 <ul>
 <li>大机模拟器——Hercules</li>
@@ -70,7 +70,8 @@ tags: [Mainframe,Windows,OS]
 <li>图形界面GUI——HercGUI * 非必须</li>
 <li>3270客户端——IBM Personal Communication 或 Vista TN 3270</li>
 <li>VC 2005 和 VC 2008 的运行库</li>
-</ul><h2 class="wmd-title" id="卷文件准备">3.卷文件准备</h2>
+<li>WinXP | WinVista | Win7 | Win8 皆可</li>
+</ul><h2 class="wmd-title" id="卷文件准备">3. 卷文件准备</h2>
 
 <ul>
 <li>IBM只向内部员工或合作伙伴提供, 但其实可以通过某些非正常途径弄到...╭(╯^╰)╮</li>
@@ -122,7 +123,9 @@ tags: [Mainframe,Windows,OS]
 
 <p>32位系统将<code>bin</code>中的文件解压到Hercules安装目录，64位系统需要分别将<code>bin</code>和<code>x64/bin</code>中的文件解压到Hercules安装目录</p>
 
-<p>Fishlib的解压方法同理。</p><h2 class="wmd-title" id="安装客户端">5. 安装3270客户端</h2>
+<p>Fishlib的解压方法同理。</p>
+
+<h2 class="wmd-title" id="安装客户端">5. 安装3270客户端</h2>
 
 <p>这一步还是主要安装路径最好全英文</p>
 
@@ -484,7 +487,9 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
 
 <blockquote>
   <p>你可以使用自己搭建的虚拟环境来进行一些主机相关的教学、开发、测试或折腾。但请注意一定不要用于商业用途！如果太高调难免18摸会找你麻烦（笑</p>
-</blockquote><h1 class="wmd-title" id="六附录资源列表">六、附录：资源列表</h1>
+</blockquote>
+
+<h1 class="wmd-title" id="六附录资源列表">六、附录：资源列表</h1>
 
 <hr>
 
@@ -498,5 +503,6 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
 <li>Vista TN3270：<a href="http://www.tombrennansoftware.com/">http://www.tombrennansoftware.com/</a></li>
 <li>VC 2008 运行库：<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=11895">http://www.microsoft.com/zh-cn/download/details.aspx?id=11895</a></li>
 <li>VC 2005 运行库：<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=5638">http://www.microsoft.com/zh-cn/download/details.aspx?id=5638</a></li>
-<li style="color:black;background:black" title="我什么都不知道">我什么都不知道：http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/zos1.9.txt</li>
 </ul>
+
+<ul style="color:black;background:black" title="我什么都不知道">我什么都不知道：jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/zos1.9.txt</ul>
