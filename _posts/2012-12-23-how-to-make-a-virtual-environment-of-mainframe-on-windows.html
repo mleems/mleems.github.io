@@ -267,7 +267,7 @@ chdir </span><span class="typ">Conf</span><span class="pln">
 <p><code>&gt; "Logs\...</code>表示日志文件的存储路径及记录格式，可以根据自己的需要修改。</p>
 
 <p>执行上面命令后就可以看见Hercules的主控台面板了
-<img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/00-control-panel.png" alt="control-panel" title="control-panel"></p>
+<img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/00-control-panel.png" alt="control-panel" title="control-panel"></p>
 
 <p>图 00-主控台面板</p>
 
@@ -279,7 +279,7 @@ chdir </span><span class="typ">Conf</span><span class="pln">
 
 <p>输入<code>ipl 0a80</code>后你会在3270客户端看到一系列变化，初次启动时会需要你回复系统一些信息，根据系统提示回复即可，比如图01</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/01-first-ipl.png" alt="first-ipl" title="first-ipl"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/01-first-ipl.png" alt="first-ipl" title="first-ipl"></p>
 
 <p>图 01-首次IPL</p>
 
@@ -293,19 +293,19 @@ chdir </span><span class="typ">Conf</span><span class="pln">
 
 <p>如果发现作业队列什么都没显示的话可以使用<code>prefix **</code>命令显示所有作业。如图02</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/02-display-jobs.png" alt="display-jobs" title="display-jobs"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/02-display-jobs.png" alt="display-jobs" title="display-jobs"></p>
 
 <p>图 02-显示所有作业</p>
 
 <p>找到作业<code>TCPIP</code>并查看</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/03-select-job.png" alt="select-job" title="select-job"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/03-select-job.png" alt="select-job" title="select-job"></p>
 
 <p>图 03-选择作业</p>
 
 <p>根据作业中DD语句找到指定的TCP/IP配置数据集</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/04-position-dataset.png" alt="04-position-dataset" title="position-dataset"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/04-position-dataset.png" alt="04-position-dataset" title="position-dataset"></p>
 
 <p>图 04-定位配置数据集</p>
 
@@ -321,7 +321,7 @@ HOME </span><span class="lit">192.168</span><span class="pun">.</span><span clas
 
 <p>如图05-01</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/05-edit-profile-01.png" alt="05-edit-profile-01" title="edit-profile-01"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/05-edit-profile-01.png" alt="05-edit-profile-01" title="edit-profile-01"></p>
 
 <p>图 05-01-编辑TCP/IP配置数据集</p>
 
@@ -332,19 +332,19 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
 
 <p>如图 05-02</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/05-edit-profile-02.png" alt="05-edit-profile-01" title="edit-profile-02"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/05-edit-profile-02.png" alt="05-edit-profile-01" title="edit-profile-02"></p>
 
 <p>图 05-02-编辑TCP/IP配置数据集</p>
 
 <p>把倒数第三行的<code>START LCS1</code>改为<code>START CTCDEV1</code>，保存退出</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/05-edit-profile-03.png" alt="05-edit-profile-03" title="edit-profile-03"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/05-edit-profile-03.png" alt="05-edit-profile-03" title="edit-profile-03"></p>
 
 <p>图 05-03-编辑TCP/IP配置数据集</p>
 
 <p>接下来配置<code>TCPDATA</code>数据集，按下图06配置即可</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/06-edit-tcpdata.png" alt="06-edit-tcpdata" title="edit-tcpdata"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/06-edit-tcpdata.png" alt="06-edit-tcpdata" title="edit-tcpdata"></p>
 
 <p>图 06-编辑TCPDATA数据集</p>
 
@@ -358,33 +358,33 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
 
 <p>按照TCPDATA中的主机名仿照图-07修改即可</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/07-edit-hosts.png" alt="07-edit-hosts" title="edit-hosts"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/07-edit-hosts.png" alt="07-edit-hosts" title="edit-hosts"></p>
 
 <p>图 07-修改hosts</p>
 
 <p>修改完成后在<code>TCPIP.HOSTS.LOCAL</code>数据集前打<code>MAKESITE</code>命令生成site信息</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/08-makesite.png" alt="08-makesite" title="makesite"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/08-makesite.png" alt="08-makesite" title="makesite"></p>
 
 <p>图 08-MakeSite</p>
 
 <p>注意图-09中的makesite信息，可以发现新生成的site信息数据集是以当前用户ID（即IBMUSER）为HLQ的，所以必须把这两个数据集重命名为<code>TCPIP.HOSTS.ADDRINFO</code>和<code>TCPIP.HOSTS.SITEINFO</code>，不然TCP/IP使用的仍是旧的site信息</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/09-makesite-info.png" alt="09-makesite-info" title="makesite-info"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/09-makesite-info.png" alt="09-makesite-info" title="makesite-info"></p>
 
 <p>图 09-MakeSite显示信息</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/10-rename.png" alt="10-rename" title="rename"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/10-rename.png" alt="10-rename" title="rename"></p>
 
 <p>图 10-重命名</p>
 
 <p>下面把所有HFS数据集CATALOG，这和USS有关</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/11-catalog-dataset-01.png" alt="11-catalog-dataset-01" title="catalog-dataset-01"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/11-catalog-dataset-01.png" alt="11-catalog-dataset-01" title="catalog-dataset-01"></p>
 
 <p>图 11-01-编目HFS数据集</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/11-catalog-dataset-02.png" alt="11-catalog-dataset-02" title="catalog-dataset-02"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/11-catalog-dataset-02.png" alt="11-catalog-dataset-02" title="catalog-dataset-02"></p>
 
 <p>图 11-02-编目HFS数据集</p>
 
@@ -396,23 +396,23 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
 
 <p>这里附上一些过程图</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/12-reipl-01.png" alt="12-reipl-01" title="reipl-01"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/12-reipl-01.png" alt="12-reipl-01" title="reipl-01"></p>
 
 <p>图 12-01-再次IPL</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/12-reipl-02.png" alt="12-reipl-02" title="reipl-02"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/12-reipl-02.png" alt="12-reipl-02" title="reipl-02"></p>
 
 <p>图 12-02-再次IPL</p>
 
 <p>大机启动完成后，如果TCP/IP配置正确，从PC就可以ping得通大机了</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/13-ping-mf.png" alt="13-ping-mf" title="ping-mf"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/13-ping-mf.png" alt="13-ping-mf" title="ping-mf"></p>
 
 <p>图 13-PC ping 大机</p>
 
 <p>来看看DB2的DDF信息</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/14-ddf-info.png" alt="14-ddf-info" title="ddf-info"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/14-ddf-info.png" alt="14-ddf-info" title="ddf-info"></p>
 
 <p>图 14-DDF信息</p>
 
@@ -420,19 +420,19 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
 
 <p>看看再登陆大机时左上角是不是显示了你的ip？</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/15-logon-panel.png" alt="15-logon-panel" title="logon-panel"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/15-logon-panel.png" alt="15-logon-panel" title="logon-panel"></p>
 
 <p>图 15-配置TCP/IP后的登陆界面</p>
 
 <p>也许你会发现PC ping 大机可以ping通但是大机ping PC却不行，这是你PC上防火墙的设置导致的，把“文件和打印机回显请求”的流入量开放即可，如图16</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/16-open-firewall.png" alt="16-open-firewall" title="open-firewall"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/16-open-firewall.png" alt="16-open-firewall" title="open-firewall"></p>
 
 <p>图 16-开启PC防火墙</p>
 
 <p>再试试ping PC？</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/17-ping-host.png" alt="17-ping-host" title="ping-host"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/17-ping-host.png" alt="17-ping-host" title="ping-host"></p>
 
 <p>图 17-大机ping宿主机</p>
 
@@ -446,13 +446,13 @@ DEFAULTNET </span><span class="lit">192.168</span><span class="pun">.</span><spa
   <p>通常来说在z/OS中是大小写不敏感的，但在这里要注意的是我们编辑的是USS（Unix System Service，IBM大型主机平台下类UNIX系统，z/OS必选组件）中的文件，是大小写敏感的，切记切记！</p>
 </blockquote>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/18-edit-ssh-01.png" alt="18-edit-ssh-01" title="edit-ssh-01"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/18-edit-ssh-01.png" alt="18-edit-ssh-01" title="edit-ssh-01"></p>
 
 <p>图 18-01-配置ssh</p>
 
 <p>仿照图18-02修改</p>
 
-<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-pc/18-edit-ssh-02.png" alt="18-edit-ssh-02" title="edit-ssh-02"></p>
+<p><img src="http://jervan.me/images/how-to-make-a-virtual-environment-of-mainframe-on-windows/18-edit-ssh-02.png" alt="18-edit-ssh-02" title="edit-ssh-02"></p>
 
 <p>图 18-02-配置ssh</p>
 
