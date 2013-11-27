@@ -18,7 +18,7 @@
 
     <link href="{{site.hosturl}}/assets/themes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{site.hosturl}}/assets/themes/custome/css/custome.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{site.hosturl}}/assets/themes/custome/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{site.hosturl}}/assets/themes/custome/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
     <!--[if lte IE 9]>
     <meta http-equiv="refresh" content="0; url={{site.hosturl}}/let's-kill-ie/" />
     <![endif]-->
